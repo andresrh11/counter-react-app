@@ -1,9 +1,9 @@
 import "../style.css";
-
-function newValue() {
+import PropTypes from "prop-types";
+function newValue(title, subtitle) {
   const object = {
-    c1: "test1",
-    c2: "test2",
+    c1: title,
+    c2: subtitle,
   };
   return (
     <>
@@ -13,14 +13,26 @@ function newValue() {
   );
 }
 
-export const FirstApp = () => {
+export const FirstApp = ({ title, subtitle }) => {
   const newMessage = "andres";
 
   return (
     <>
       <h1>Andres</h1>
       <h2>{newMessage}</h2>
-      <div>{newValue()}</div>
+      <div>{newValue(title, subtitle)}</div>
     </>
   );
+};
+
+// Especificaciones para que no se envie otro valor distinto al tipo de dato que se espera recibir
+FirstApp.propTypes = {
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
+};
+
+// Especificacion para establecer valores por defecto
+FirstApp.defaultProps = {
+  title: "Andrés",
+  subtitle: "Romero",
 };

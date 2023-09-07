@@ -6,3 +6,18 @@ html,body{
     font-size: 1.3rem;
     padding: 70px;
 }
+button{
+    background-color: #9b9d33;
+    width: 75px;
+    height: 45px;
+    box-shadow: white;
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3px;
+}
+.but{
+    display: flex;
+}
