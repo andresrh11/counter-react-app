@@ -1,3 +1,5 @@
+import "../style.css";
+
 function newValue() {
   const object = {
     c1: "test1",
